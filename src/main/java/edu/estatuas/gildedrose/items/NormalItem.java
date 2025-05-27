@@ -1,5 +1,6 @@
 package edu.estatuas.gildedrose.items;
 
+
 public class NormalItem implements Updateable{
 
     private String name;
