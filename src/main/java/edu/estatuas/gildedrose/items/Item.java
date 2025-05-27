@@ -1,4 +1,4 @@
-package edu.estatuas.gildedrose.item;
+package edu.estatuas.gildedrose.items;
 
 /**
  * Item 17: Minimize mutability
