@@ -1,15 +1,13 @@
 package edu.estatuas.gildedrose.items;
 
-public class Elixir implements Updateable{
+public class Elixir extends NormalItem{
     
     private String name;
     private int sell_in;
     private int quality;
 
     public Elixir(String name, int sell_in, int quality) {
-        this.name = name;
-        this.sell_in = sell_in;
-        this.quality = quality;
+        super(name, sell_in, quality);
     }
 
 
@@ -33,8 +31,5 @@ public class Elixir implements Updateable{
     }
 
 
-    public int getQuality() {
-        return quality;
-    }
 
 }

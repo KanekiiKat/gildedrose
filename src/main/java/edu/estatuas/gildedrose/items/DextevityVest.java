@@ -1,6 +1,6 @@
 package edu.estatuas.gildedrose.items;
 
-public class DextevityVest implements Updateable{
+public class DextevityVest extends NormalItem{
 
 
     private String name;
@@ -8,9 +8,7 @@ public class DextevityVest implements Updateable{
     private int quality;
 
     public DextevityVest(String name, int quality, int sell_in) {
-        this.name = name;
-        this.quality = quality;
-        this.sell_in = sell_in;
+        super(name, sell_in, quality);
     }
 
     @Override
