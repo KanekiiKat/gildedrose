@@ -7,9 +7,8 @@ public class Sulfuras extends NormalItem{
         super(name, sell_in, quality);
     }
 
-    
     @Override
-    public void updateQuality(int quality) {
+    public void updateQuality() {
     }
 
 

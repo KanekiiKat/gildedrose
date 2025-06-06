@@ -5,7 +5,7 @@ package edu.estatuas.gildedrose.items;
  * Ensure that the class can’t be extended.
  * Bloch, Joshua; Effective Java, Third Edition.
  */
-abstract class Item implements Updateable {
+public class Item {
 
     /**
      * Item 17: Minimize mutability.

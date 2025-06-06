@@ -1,22 +1,21 @@
 package edu.estatuas.gildedrose.items;
 
 
-public class NormalItem implements Updateable{
+public class NormalItem implements Updateable {
 
     private String name;
     private int sell_in;
     private int quality;
+    private final Item item;
 
 
-    NormalItem(String name, int sell_in, int quality) {
-        this.name = name;
-        this.quality = quality;
-        this.sell_in = sell_in;
+    public NormalItem(String name, int sell_in, int quality) {
+        this.item = new Item(name, sell_in, quality);
     }
 
 
     public String getName() {
-        return name;
+        return item.getName();
     }
 
 
@@ -26,31 +25,48 @@ public class NormalItem implements Updateable{
 
 
     public int getSell_in() {
-        return sell_in;
+        return item.getSell_in();
+    }
+
+    void setSell_in(){
+        item.setSell_in();
     }
 
 
 
-    public double getQuality() {
-        return quality;
+    public int getQuality() {
+        return item.getQuality();
     }
 
     @Override
-    public void updateQuality(int quality) {
-        this.quality = quality;
+    public void updateQuality() {
+        if (getSell_in() > 0){
+            computeQuality(-1);
+        } else if (getSell_in() <= 0){
+            computeQuality(-2);
+        }
+        setSell_in();
     }
-    @Override
-    public void updateSelling( int sell_in) {
-        this.sell_in = sell_in;
-    }
+  
     
   
+
+
+    void computeQuality(int value){
+        if (getQuality() + value > 50){
+        item.setQuality(50);
+        } else if (getQuality() + value >= 0){
+            item.setQuality(getQuality() + value);
+        } else {
+            item.setQuality(0);
+        }
+        
+    }
+
+    
     @Override
     public String toString(){
     return this.name;
     }
-
-
-    
 
 }

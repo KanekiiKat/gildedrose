@@ -12,10 +12,10 @@ public class DextevityVest extends NormalItem{
     }
 
     @Override
-    public void updateQuality(int quality) {
+    public void updateQuality() {
         this.quality = quality;
     }
-    @Override
+
     public void updateSelling( int sell_in) {
         this.sell_in = sell_in;
     }

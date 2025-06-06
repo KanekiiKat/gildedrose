@@ -25,5 +25,14 @@ public class GildedRose {
     public String toString(){
         return inventory.toString();
     }
+
+
+    public void updateQuality() {
+        for (Updateable item : inventory){
+            item.updateQuality();
+        }
+    }
+
+    
     
 }
