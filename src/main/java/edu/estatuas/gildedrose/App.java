@@ -4,6 +4,7 @@ import java.util.List;
 
 import edu.estatuas.gildedrose.items.AgedBrie;
 import edu.estatuas.gildedrose.items.Backstage;
+import edu.estatuas.gildedrose.items.Conjured;
 import edu.estatuas.gildedrose.items.NormalItem;
 import edu.estatuas.gildedrose.items.Sulfuras;
 import edu.estatuas.gildedrose.items.Updateable;
@@ -40,6 +41,33 @@ public class App {
         * Ollivander lists the inventory
         */
         System.out.println("\t ####  DAY 1 ####");
+        System.out.println(shop.toString());
+
+                /**
+         * One day is gone, inventory updated
+         */
+        shop.updateQuality();
+
+        /**
+         * Ollivander lists the inventory
+         */
+        System.out.println("\t ####  DAY 2 ####");
+        System.out.println(shop.toString());
+
+        /**
+         * New item type Conjured just arrived.
+         * Add it to the inventory: 
+         * polimorphism in action
+         */
+        shop.addItem(new Conjured("Conjured Mana Cake", 3, 6));
+        System.out.println("\t ####  New item conjured added ####");
+        System.out.println(shop.toString());
+
+        /**
+         * Another day is gone, inventory updated
+         */
+        shop.updateQuality();
+        System.out.println("\t ####  DAY 3 ####");
         System.out.println(shop.toString());
 
     }
