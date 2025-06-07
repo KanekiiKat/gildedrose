@@ -1,8 +1,8 @@
 package edu.estatuas.gildedrose.items;
 
-public class AgredBrie extends NormalItem {
+public class AgedBrie extends NormalItem {
 
-    public AgredBrie(String name, int quality, int sell_in) {
+    public AgedBrie(String name, int sell_in, int quality) {
         super(name, sell_in, quality);
     }
 

@@ -1,5 +1,13 @@
 package edu.estatuas.gildedrose;
 
+import java.util.List;
+
+import edu.estatuas.gildedrose.items.AgedBrie;
+import edu.estatuas.gildedrose.items.Backstage;
+import edu.estatuas.gildedrose.items.NormalItem;
+import edu.estatuas.gildedrose.items.Sulfuras;
+import edu.estatuas.gildedrose.items.Updateable;
+
 public class App {
 
         public static void main(String[] args) {
@@ -12,7 +20,7 @@ public class App {
          * Tedious but necessary, Ollivanders types the 
          * just arrived items and adds them to the 
          * inventory.
-         
+         */
 
         List<Updateable> items = List.of(new NormalItem("+5 Dexterity Vest", 10, 20),
                                          new AgedBrie("Aged Brie", 2, 0),
@@ -27,7 +35,7 @@ public class App {
         for (Updateable item : items) {
             shop.addItem(item);
         }
-*/
+
 
     }
 }

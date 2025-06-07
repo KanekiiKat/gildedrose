@@ -3,10 +3,10 @@ package edu.estatuas.gildedrose.items;
 
 public class NormalItem implements Updateable {
 
-    private String name;
-    private int sell_in;
-    private int quality;
-    private final Item item;
+    protected  String name;
+    protected int sell_in;
+    protected int quality;
+    protected final Item item;
 
 
     public NormalItem(String name, int sell_in, int quality) {
