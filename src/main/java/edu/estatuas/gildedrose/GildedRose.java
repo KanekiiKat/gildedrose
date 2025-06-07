@@ -14,16 +14,11 @@ public class GildedRose {
     }
 
     public List<Updateable> inventory(){
-        return inventory;
+        return this.inventory;
     }
 
     public void addItem(Updateable item){
         inventory.add(item);
-    }
-
-    @Override
-    public String toString(){
-        return inventory.toString();
     }
 
 
@@ -33,6 +28,13 @@ public class GildedRose {
         }
     }
 
-    
+    @Override
+    public String toString(){
+        StringBuilder stringitem = new StringBuilder();
+        for (Updateable item : inventory){
+            stringitem.append(item.toString() + "\n");
+        }
+        return stringitem.toString();
+    }
     
 }

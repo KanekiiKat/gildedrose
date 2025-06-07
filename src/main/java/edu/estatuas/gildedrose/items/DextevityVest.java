@@ -9,7 +9,7 @@ public class DextevityVest extends NormalItem{
 
     @Override
     public void updateQuality() {
-        this.quality = quality;
+
     }
 
 

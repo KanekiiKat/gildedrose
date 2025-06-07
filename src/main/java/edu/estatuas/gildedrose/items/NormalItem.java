@@ -3,9 +3,6 @@ package edu.estatuas.gildedrose.items;
 
 public class NormalItem implements Updateable {
 
-    protected  String name;
-    protected int sell_in;
-    protected int quality;
     protected final Item item;
 
 
@@ -16,11 +13,6 @@ public class NormalItem implements Updateable {
 
     public String getName() {
         return item.getName();
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 
@@ -66,7 +58,12 @@ public class NormalItem implements Updateable {
     
     @Override
     public String toString(){
-    return this.name;
+        StringBuilder itemString = new StringBuilder();
+        itemString.append(getName() + ",\s");
+        itemString.append(getSell_in()  + ",\s");
+        itemString.append(getQuality() + "\n");
+        return itemString.toString();
+
     }
 
 }

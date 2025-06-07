@@ -36,6 +36,11 @@ public class App {
             shop.addItem(item);
         }
 
+        /**
+        * Ollivander lists the inventory
+        */
+        System.out.println("\t ####  DAY 1 ####");
+        System.out.println(shop.toString());
 
     }
 }
